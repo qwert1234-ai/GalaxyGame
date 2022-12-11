@@ -17,11 +17,11 @@ public class LevelManager : MonoBehaviour
     }
     void Update()
     {
-        if(currentEnemyGroup.isAlive == false)
+        if(currentEnemyGroup != null && currentEnemyGroup.isAlive == false)
         {
             Destroy(currentEnemyGroup.gameObject);
             if(groupsCount == 3) {
-                SceneManager.LoadSceneAsync(1);
+                SceneManager.LoadSceneAsync(SceneIDS.winSceneID);
             }else {
                 CreateNewGroup();
                 groupsCount ++;
