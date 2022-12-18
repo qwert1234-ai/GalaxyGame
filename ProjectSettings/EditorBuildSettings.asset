@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 67add06b58ef79d48b87f6c7336f8a4f
+  - enabled: 1
+    path: Assets/Scenes/LoozeScene.unity
+    guid: 09db98ba47bb5214dadbf23592b066fb
   m_configObjects: {}

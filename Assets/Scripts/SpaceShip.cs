@@ -8,7 +8,8 @@ public class SpaceShip : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
-    float speed = 0.3f;
+    private float speed = 0.3f;
+    public int health = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -49,5 +50,15 @@ public class SpaceShip : MonoBehaviour
         }
     }
 
-    
+    void OnTriggerEnter2D(Collider2D otherCollider) {
+        GameObject otherObject = otherCollider.gameObject;
+        EnemyBullet bulletScript = otherObject.GetComponent<EnemyBullet>();
+        if(bulletScript != null){
+            health = health - bulletScript.damage;
+            Destroy(otherObject);
+            if(health <= 0){
+                Destroy(gameObject);
+            }
+        }
+    }
 }
