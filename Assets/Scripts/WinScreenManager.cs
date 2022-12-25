@@ -12,4 +12,8 @@ public class WinScreenManager : MonoBehaviour
     public void ReplayLevel() {
     SceneManager.LoadSceneAsync(SceneIDS.levelSceneID);
     }
+
+    public void ReturnToMap() {
+        SceneManager.LoadSceneAsync(SceneIDS.levelSelectSceneID);
+    }
 }

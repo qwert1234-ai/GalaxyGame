@@ -7,7 +7,8 @@ public class SceneIDS
     
     public static int levelSceneID =    1;
     
-    public static int winSceneID = 0;
-    public static int loozeSceneID = 2;
+    public static int winSceneID = 2;
+    public static int loozeSceneID = 3;
+    public static int levelSelectSceneID = 0;
 
 }

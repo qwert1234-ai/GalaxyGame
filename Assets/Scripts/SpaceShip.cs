@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class SpaceShip : MonoBehaviour
 {
@@ -57,6 +59,7 @@ public class SpaceShip : MonoBehaviour
             health = health - bulletScript.damage;
             Destroy(otherObject);
             if(health <= 0){
+                SceneManager.LoadSceneAsync(SceneIDS.loozeSceneID);
                 Destroy(gameObject);
             }
         }
